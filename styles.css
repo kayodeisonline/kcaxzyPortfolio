@@ -1,0 +1,619 @@
+/************** WEB LAYOUT **************/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(241, 241, 236);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+
+/************** NAVIGATION BAR **************/
+
+nav {
+    width: 100%;
+    height: 800px;
+    background-image: linear-gradient(rgba(255, 255, 0, 0.637), rgb(171, 212, 57));
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-bar {
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.507);
+    display: flex;
+    justify-content: space-around;
+    /* overflow: hidden; */
+    position: fixed;
+    /* top: 0; */
+}
+
+
+/************** MENU BAR **************/
+
+.logo {
+    width: 160px;
+    height: 60px;
+    margin: 2px 0 0 0px;
+    padding: 15px 0 0 25px;
+    border-radius:15px;
+}
+
+.menu {
+    display: flex;
+}
+
+.item {
+    margin: 30px 40px 30px 40px;
+}
+
+
+/************** NAV-BAR MENU UNDERLINE EFFECT **************/
+
+.itm1, .itm2, .itm3, .itm4, .itm5 {
+	text-decoration: none;
+	color: rgb(8, 8, 8);
+	display: inline-block;
+    position: absolute;
+}
+
+.itm1::after, .itm2::after, .itm3::after, .itm4::after, .itm5::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(8, 8, 8);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.itm1:hover:after, .itm2:hover:after, .itm3:hover:after, .itm4:hover:after, .itm5:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.itm1:hover, .itm2:hover, .itm3:hover, .itm4:hover, .itm5:hover {
+    color: yellow;
+}
+
+
+/************** NAV-BAR BUTTONS **************/
+
+.talk-to-me {
+    width: 135px;
+    height: 45px;
+    background-color: transparent;
+    border-radius: 25px;
+    border-color:  rgb(8, 8, 8);
+    margin: 18px 10px 0px 0px;
+    font-family: monospace;
+    font-size: 15px;
+    color: rgb(8, 8, 8);
+} 
+
+
+.talk-to-me:hover {
+    background-color: #b8d129;
+    border: none;
+    color: black;
+}
+
+
+/************** PROFILE SECTION **************/
+
+.profile {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 150px 75px 50px 75px;
+}
+
+.profile-image {
+    width: 320px;
+    height: 320px;
+    border-radius:160px;
+    background-color: rgb(95, 100, 21);
+}
+
+.profile-image:hover {
+    background-color: transparent;
+}
+.inner-circle {
+    margin: 50px 20px 25px 35px;
+    width: 260x;
+    height: 260px;
+    border-radius: 130px;
+    background-color: rgb(61, 71, 15);
+    justify-content: center;
+}
+
+.personal-image {
+    width: 245px;
+    height: 255px;
+    margin-left: 22px;
+    margin-bottom: 40px;
+    margin-right: 30px;
+}
+
+.profile-details {
+    margin-top: 100px;
+    margin-left: 80px;
+    font-size: 25px;
+    font-family: cursive;
+}
+
+.pd1 {
+    line-height: 2;
+}
+.contact {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tel {
+    display: flex;
+    margin-left: 200px;
+}
+
+#mobile-screen {
+    font-size: 75px;
+}
+
+.tel-num {
+    margin: 3px 0 0 10px;
+    text-align: end;
+    font-size: 20px;
+    font-family: fantasy;
+}
+
+.email {
+    display: flex;
+}
+
+.email-address {
+    margin: 3px 10px 0 0;
+    text-align: end;
+    font-size: 20px;
+    font-family: fantasy;
+}
+
+#square-envelope {
+    margin-top: 3px;
+    font-size: 75px;
+}
+
+.workspace {
+    padding: 75px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.work {
+    display: flex;
+}
+
+.fa-sharp {
+    font-size: 50px;
+    margin-left: 40px;
+}
+
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 25px 0 25px 0;
+    opacity: 0.75;
+}
+
+.row:hover {
+    opacity: 1;
+}
+
+.work-image {
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+}
+
+
+
+
+.work-button {
+    font-size:15px;
+    font-family:Arial;
+    width:140px;
+    height:50px;
+    border-width:1px;
+    color:#f1eaea;
+    border-color:#181D31;
+    font-weight:bold;
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    box-shadow:inset 0px 1px 0px 0px #6470a1;
+    text-shadow:inset 0px 1px 0px #202f69;
+    background:#181D31;
+    position: relative;
+    left: 47%;
+    margin-top: 20px;
+  }
+  
+  .work-button:hover {
+    background: #202f69;
+  }
+
+
+
+  /************** ABOUT ME **************/
+
+.about {
+    width: 100%;
+    height: 650px;
+    margin: 75px 0 150px 0;
+    background-color: #7e859e;;
+}
+
+.about-frame {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-me {
+    width: 65%;
+    /* height: 300px; */
+    margin-left: 70px;
+    margin-top: 175px;
+}
+
+
+.about-head {
+    position: absolute;
+    left: 37%;
+    margin-top: 5%;
+    font-size: 75px;
+    font-family: cursive;
+    color: #1c2446;
+
+}
+
+
+.personal-pix {
+    width: 180px;
+    height: 270px;
+    float: left;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+
+.personal-desc {
+    color: #1c2446;
+    font-size: 24px;
+    margin-top: 5px;
+    font-family: cursive;
+    text-align: justify;
+}
+
+.mantra {
+    width: 20%;
+    height: 260px;
+    background-color: rgba(0, 0, 0, 0.507);
+    border-radius: 30px 0 30px 0;
+    margin-right: 70px;
+    margin-top: 200px;
+    color: chartreuse;
+    display: flex;
+    flex-direction: column;
+    font-family: cursive;
+}
+
+.mantra:hover {
+    background-color: transparent;
+    color: black;
+}
+
+.mantra-head {
+    margin: 30px 0 25px 50px;
+    font-size: 40px;
+}
+
+.m1 {
+    text-align: center;
+    font-size: 22px;
+}
+
+.about-skills {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 50px 0;
+}
+
+.skill-img {
+    width: 80px;
+    height: 80px;
+    box-shadow: 3px 3px 5px #2c3e88;
+    ;
+    border-radius: 0 0 20px 0;
+    margin-bottom: 10px;
+}
+
+
+
+/************ CONTACT PAGE *************/
+
+.contact-me {
+    width: 93%;
+    height: 600px;
+    background-image: radial-gradient( rgb(246, 248, 228), rgb(234, 253, 182));
+    margin: 150px 50px 150px 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-image {
+    width: 330px;
+    height: 330px;
+    margin-left: 150px;
+    margin-top: 40px;
+    border-radius: 20px;
+}
+
+.contact-font {
+    margin: 30px 0 25px 80px;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    color: darkslategray;
+}
+
+.input-section {
+    margin-bottom: 20px;
+    margin-right: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    color: darkslategray;
+}
+
+.submit {
+    width: 135px;
+    height: 45px;
+    background-color: transparent;
+    border-radius: 25px;
+    border-color:darkslategray;
+    margin: 18px 10px 0 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: darkslategray;
+    font-size: 15px;
+}
+
+.submit:hover {
+    background-color: rgb(175, 199, 42);
+    border: none;
+    color: black;
+}
+
+
+
+/**************** FOOTER ****************/
+
+footer {
+    width: 100%;
+    height: 300px;
+    background-color: black;
+}
+
+
+.f-logo {
+    width: 160px;
+    height: 60px;
+    padding: 15px 0 0 15px;
+    border-radius: 15px;
+    margin: 30px 0 10px 75px;
+}
+
+.abt-me {
+    margin: 10px 130px;
+    display: flex;
+}
+
+
+.footer-desc {
+    width: 70%;
+    margin-top: 0;
+}
+
+.footer-btn {
+    position: absolute;
+    right: 100px;
+}
+
+.cv-btn {
+    font-size:15px;
+    font-family:Arial;
+    width:140px;
+    height:50px;
+    border-width:1px;
+    color:#0a0a0a;
+    border-color:#74b807;
+    font-weight:bold;
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    box-shadow:inset 0px 1px 0px 0px #a4e271;
+    text-shadow:inset 0px 1px 0px #528009;
+    background:#89c403;
+    margin-right: 30px;
+}
+
+.cv-btn:hover {
+    background: #77a809;
+}
+
+.convo-btn {
+    width: 135px;
+    height: 45px;
+    background-color: transparent;
+    border-radius: 25px;
+    border-color:  #77a809;
+    margin: 18px 10px 0px 0px;
+    color: #77a809;
+} 
+
+
+.convo-btn:hover {
+background-color: #77a809;
+border: none;
+color: #0a0a0a;
+}
+
+.handle {
+    margin: 0 0 0 100px;
+}
+
+.sm {
+    color: yellow;
+    font-size: 25px;
+    position: relative;
+    left: 35%;
+    margin-right: 70px;
+    margin-top: 10px;
+}
+
+.sm:hover {
+    color: #77a809;
+}
+
+
+/********* CURRICULUM VITAE *********/
+
+.cv-body {
+    background-color: #CCD6A6;
+    display: flex;
+    flex-direction: row;
+}
+
+.back-home {
+    display: flex;
+}
+
+.cv-back-arrow {
+    font-size: 20px;
+    margin: 30px 0 0 30px;
+    color: #181D31;
+}
+
+.cv-layout {
+    width: 794px;
+    height: 1123px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 3px 3px 5px rgb(121, 128, 113);
+    display: block;
+    position: absolute;
+    left: 20%;
+}
+
+.bio-data {
+    display: block;
+    margin: 10px 10px 15px 10px;
+    text-align: center;
+    background-color: #181D31;
+    color: #FFFFFF;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.fa-map-location {
+    font-size: 60px;
+}
+
+.cv-hr {
+    border: none;
+    background-color: #181D31;
+    color: #181D31;
+    height: 2px;
+    margin: 0 48px 8px 48px;
+}
+
+.career-goal {
+    margin: 0 96px 20px 96px; 
+}
+
+.cg {
+    margin-bottom: 8px;
+}
+
+.cgp {
+    margin-left: 15px;
+}
+
+.personal-info {
+    margin-left: 96px;
+}
+
+.qual {
+    margin: 0 96px 15px 96px;
+}
+
+.sch {
+    background-color: #181D31;
+    color: #FFFFFF;
+}
+
+.work-exp {
+    margin: 0 96px 15px 96px;
+}
+
+.pro-skill {
+    margin: 0 96px 15px 96px;
+}
+
+.hobby {
+    margin: 0 96px 20px 96px;
+}
+
+.footer-desc {
+    color: yellowgreen;
+}
+
+.end-cv {
+    width: 100%;
+    height: 40px;
+    background-color: #181D31;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+.cv-btn-dwld {
+    margin-top: 30px;
+    font-size:15px;
+    font-family:Arial;
+    width:140px;
+    height:50px;
+    border-width:1px;
+    color:#ccd6a6;
+    border-color:#090b14;
+    font-weight:bold;
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    box-shadow:inset 0px 1px 0px 0px #a1aee2;
+    text-shadow:inset 0px 1px 0px #090b14;
+    background-color: #181D31;
+    position: absolute;
+    right: 5%;
+}
